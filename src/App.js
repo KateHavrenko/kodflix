@@ -26,6 +26,19 @@ function App() {
           <img src={outlander} alt='outlander'></img>
         </div>
       </div>
+      <div className="TV-show">
+        <h2>TV shows titles</h2>
+        <div className='container'>
+          <div className='item'>The Crown</div>
+          <div className='item'>Friends</div>
+          <div className='item'>Chernobyl</div>
+        </div>
+        <div className='container'>
+          <div className='item'>Big little lies</div>
+          <div className='item'>Black mirror</div>
+          <div className='item'>Outlander</div>
+        </div>
+      </div>
     </div>
   );
 }
