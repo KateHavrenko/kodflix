@@ -17,20 +17,43 @@ function App() {
         <h2>My favorite series</h2>
         <div className='container'>
           <div className='item'>
-            <img src={crown} alt='crown'/></div>
+            <img src={crown} alt='crown'/>
+            <div className='overlay'>
+              <p>The Crown</p>
+            </div>
+          </div>
           <div className='item'>
-            <img src={friends} alt='friends'/></div>
+            <img src={friends} alt='friends'/>
+            <div className='overlay'>
+              <p>Friends</p>
+            </div>
+          </div>
           <div className='item'>
-            <img src={chernobyl} alt='chernobyl'/></div>
+            <img src={chernobyl} alt='chernobyl'/>
+            <div className='overlay'>
+              <p>Chernobyl</p>
+            </div>
+          </div>
         </div>
         <div className='container'>
           <div className='item'>
             <img src={biglittlelies} alt='biglittlelies'/>
+            <div className='overlay'>
+              <p>Big little lies</p>
+            </div>
           </div>
           <div className='item'>
-            <img src={blackmirror} alt='blackmirror'/></div>
+            <img src={blackmirror} alt='blackmirror'/>
+            <div className='overlay'>
+              <p>Black Mirror</p>
+            </div>
+          </div>
           <div className='item'>
-            <img src={outlander} alt='outlander'/></div>
+            <img src={outlander} alt='outlander'/>
+            <div className='overlay'>
+              <p>Outlander</p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="TV-show">
