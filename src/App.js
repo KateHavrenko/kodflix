@@ -1,4 +1,5 @@
 import React from 'react';
+import Stack from './Stack';
 import cover from './images/about_time.jpg';
 import './App.css';
 import crown from './images/crown.jpg';
@@ -16,44 +17,14 @@ function App() {
       <div className='series'>
         <h2>My favorite series</h2>
         <div className='container'>
-          <div className='item'>
-            <img src={crown} alt='crown'/>
-            <div className='overlay'>
-              <p>The Crown</p>
-            </div>
-          </div>
-          <div className='item'>
-            <img src={friends} alt='friends'/>
-            <div className='overlay'>
-              <p>Friends</p>
-            </div>
-          </div>
-          <div className='item'>
-            <img src={chernobyl} alt='chernobyl'/>
-            <div className='overlay'>
-              <p>Chernobyl</p>
-            </div>
-          </div>
+          <Stack name='crown' img={crown} title='The Crown'/>
+          <Stack name='friends' img={friends} title='Friends'/>
+          <Stack name='chernobyl' img={chernobyl} title='Chernobyl'/>
         </div>
         <div className='container'>
-          <div className='item'>
-            <img src={biglittlelies} alt='biglittlelies'/>
-            <div className='overlay'>
-              <p>Big little lies</p>
-            </div>
-          </div>
-          <div className='item'>
-            <img src={blackmirror} alt='blackmirror'/>
-            <div className='overlay'>
-              <p>Black Mirror</p>
-            </div>
-          </div>
-          <div className='item'>
-            <img src={outlander} alt='outlander'/>
-            <div className='overlay'>
-              <p>Outlander</p>
-            </div>
-          </div>
+          <Stack name='biglittlelies' img={biglittlelies} title='Big little lies'/>
+          <Stack name='blackmirror' img={blackmirror} title='BLack Mirror'/>
+          <Stack name='outlander' img={outlander} title='Outlander'/>
         </div>
       </div>
       <div className="TV-show">
@@ -72,5 +43,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
