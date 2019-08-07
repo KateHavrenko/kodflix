@@ -1,29 +1,36 @@
 import React from 'react';
-import cover from './about_time.jpg';
+import cover from './images/about_time.jpg';
 import './App.css';
-import crown from './crown.jpg';
-import chernobyl from './chernobyl.jpg';
-import friends from './friends.jpg';
-import biglittlelies from './biglittlelies.jpg';
-import blackmirror from './blackmirror.jpg';
-import outlander from './outlander.jpg';
+import crown from './images/crown.jpg';
+import chernobyl from './images/chernobyl.jpg';
+import friends from './images/friends.jpg';
+import biglittlelies from './images/biglittlelies.jpg';
+import blackmirror from './images/blackmirror.jpg';
+import outlander from './images/outlander.jpg';
 
 function App() {
   return (
     <div className="App">
       <h1>Welcome to Codflix!</h1>
-      <img src={cover} className="cover-photo" alt="cover-photo" />
+      <img src={cover} className="cover-photo" alt="cover" />
       <div className='series'>
         <h2>My favorite series</h2>
-        <div>
-          <img src={crown} alt='crown'></img>
-          <img src={friends} alt='friends'></img>
-          <img src={chernobyl} alt='chernobyl'></img>
+        <div className='container'>
+          <div className='item'>
+            <img src={crown} alt='crown'/></div>
+          <div className='item'>
+            <img src={friends} alt='friends'/></div>
+          <div className='item'>
+            <img src={chernobyl} alt='chernobyl'/></div>
         </div>
-        <div>
-          <img src={biglittlelies} alt='biglittlelies'></img>
-          <img src={blackmirror} alt='blackmirror'></img>
-          <img src={outlander} alt='outlander'></img>
+        <div className='container'>
+          <div className='item'>
+            <img src={biglittlelies} alt='biglittlelies'/>
+          </div>
+          <div className='item'>
+            <img src={blackmirror} alt='blackmirror'/></div>
+          <div className='item'>
+            <img src={outlander} alt='outlander'/></div>
         </div>
       </div>
       <div className="TV-show">
