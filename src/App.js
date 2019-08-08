@@ -15,7 +15,7 @@ function App() {
       <div className='series'>
         <h2>My favorite series</h2>
         <Route exact path='/' component={Movies}/>
-        <Route exact path='/details' component={Details}/>
+        <Route exact path='/:details' component={Details}/>
       </div>
       <div className="TV-show">
         <h2>TV shows titles</h2>
