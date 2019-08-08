@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Stack(props) {
     return (
-      <div className='item'>
+      <Link to='/details' className='item'>
         <img src={props.img} alt={props.name}/>
         <div className='overlay'>
           <p>{props.title}</p>
         </div>
-      </div>
+      </Link>
     );
   }

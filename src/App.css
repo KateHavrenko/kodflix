@@ -55,6 +55,7 @@ h2 {
   font-size: 18px;
   font-weight: bolder;
   overflow: hidden;
+  color: #fff;
 }
 
 .item:hover .overlay{
