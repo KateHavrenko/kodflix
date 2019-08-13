@@ -14,8 +14,6 @@ export default function Movies() {
                 <Stack id='crown' name='crown' img={crown} title='The Crown' />
                 <Stack id='friends' name='friends' img={friends} title='Friends' />
                 <Stack id='chernobyl' name='chernobyl' img={chernobyl} title='Chernobyl' />
-            </div>
-            <div className='container'>
                 <Stack id='biglittlelies' name='biglittlelies' img={biglittlelies} title='Big little lies' />
                 <Stack id='blackmirror' name='blackmirror' img={blackmirror} title='BLack Mirror' />
                 <Stack id='outlander' name='outlander' img={outlander} title='Outlander' />
