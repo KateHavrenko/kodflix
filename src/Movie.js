@@ -6,7 +6,7 @@ export default function Stack(props) {
       <Link to={`/${props.id}`} className='item'>
         <img src={props.img} alt={props.name}/>
         <div className='overlay'>
-          <p>{props.title}</p>
+          <p>{props.name}</p>
         </div>
       </Link>
     );
