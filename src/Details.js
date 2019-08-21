@@ -1,30 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import getMovies from './movies-get';
 
-export default class Details extends Component {
-    constructor() {
-        super();
-        this.state = {
-            movie: {}
-        };
-    }
+export default function Details({match}) {
+    const [movie, setMovie] = useState('');
+    const [message, setMessage] = useState('Hello, this will be the details page :)');
+    let movieId = match.params.movieId;
+    let movieName = getMovies().find((movie) => movie.id === movieId).name;
 
-    componentDidMount() {
-        let movieId = this.props.match.params.movieId;
-        let movie = getMovies().find((movie) => movie.id === movieId);
-        this.setState({
-            movie: movie
-        });
-    }
+    useEffect(() => {
+        setMovie(movieName);
+        setTimeout(() => {
+            setMessage('Comming soon!');
+        }, 3000);
+    });
 
-    render() {
-        return (
-            <div>
-                <p>{this.state.movie.name}</p>
-                <Link to='/'>Back to home</Link>
-            </div>
-        );
-    }
+    return (
+        <div>
+            <p>{movieName}</p>
+            <p>{message}</p>
+            <Link to='/'>Back to home</Link>
+        </div>
+    );
   
 }
