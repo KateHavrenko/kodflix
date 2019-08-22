@@ -1,9 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Movies from './Movies';
 import cover from './images/about_time.jpg';
 import './App.css';
 import Details from './Details';
+import NotFound from './NotFound';
 
 
 function App() {
@@ -11,11 +12,14 @@ function App() {
     <Router>
     <div className="App">
       <h1>Welcome to Codflix!</h1>
-      <img src={cover} className="cover-photo" alt="cover" />
+      {/* <img src={cover} className="cover-photo" alt="cover" /> */}
       <div className='series'>
         <h2>My favorite series</h2>
-        <Route exact path='/' component={Movies}/>
-        <Route exact path='/:movieId' component={Details}/>
+        <Switch>
+          <Route exact path='/' component={Movies}/>
+          <Route exact path='/not-found' component={NotFound} />
+          <Route exact path='/:movieId' component={Details}/>
+        </Switch>
       </div>
       <div className="TV-show">
         <h2>TV shows titles</h2>
