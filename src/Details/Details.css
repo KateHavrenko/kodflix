@@ -1,0 +1,11 @@
+
+.details .description {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .details .container {
+        grid-template-columns: 1fr;
+    }
+  }
+  

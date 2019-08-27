@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Redirect} from 'react-router-dom';
-import getMovies from './movies-get';
+import getMovies from '../movies-get';
+import './Details.css';
 
 export default function Details({match}) {
     const [movie, setMovie] = useState('');
@@ -20,9 +21,13 @@ export default function Details({match}) {
         return <Redirect to='/not-found'/>
     } else {
         return (
-            <div>
-                <p>{movie.name}</p>
-                <p>{message}</p>
+            <div className='details'>
+                <h1>{movie.name}</h1>
+                <div className='container'>
+                    {/* <p>{message}</p> */}
+                    <p className='description'>{movie.description}</p>
+                    <img src={movie.img} title={movie.name}/>
+                </div>
                 <Link to='/'>Back to home</Link>
             </div>
         );
