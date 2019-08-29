@@ -1,8 +1,22 @@
- import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Movie from './Movie';
 import getMovies from './movies-get';
 
+
+
 export default function Movies() {
+
+    useEffect(() => {
+        fetch('/rest/shows')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(myJson) {
+                console.log(JSON.stringify(myJson));
+        });
+    }, []);
+
+
     return (
         <div className='movies'>
             <div className='container'>
