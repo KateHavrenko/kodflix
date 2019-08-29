@@ -1,4 +1,3 @@
-import React from 'react';
 import crown from './images/crown.jpg';
 import chernobyl from './images/chernobyl.jpg';
 import friends from './images/friends.jpg';

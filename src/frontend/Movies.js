@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import Movie from './Movie';
 import getMovies from './movies-get';
 

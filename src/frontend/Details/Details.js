@@ -5,17 +5,17 @@ import './Details.css';
 
 export default function Details({match}) {
     const [movie, setMovie] = useState('');
-    const [message, setMessage] = useState('Hello, this will be the details page :)');
+    //const [message, setMessage] = useState('Hello, this will be the details page :)');
     let movieId = match.params.movieId;
     let matchedMovie = getMovies().find((movie) => movie.id === movieId);
 
 
     useEffect(() => {
         setMovie(matchedMovie);
-        setTimeout(() => {
-            setMessage('Comming soon!');
-        }, 3000);
-    }, []);
+        // setTimeout(() => {
+        //     setMessage('Comming soon!');
+        // }, 3000);
+    }, [matchedMovie]);
 
     if(movie === undefined) {
         return <Redirect to='/not-found'/>
@@ -26,7 +26,7 @@ export default function Details({match}) {
                 <div className='container'>
                     {/* <p>{message}</p> */}
                     <p className='description'>{movie.description}</p>
-                    <img src={movie.img} title={movie.name}/>
+                    <img src={movie.img} title={movie.name} alt='something meaningful'/>
                 </div>
                 <Link to='/'>Back to home</Link>
             </div>
