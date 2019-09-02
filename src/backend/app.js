@@ -1,11 +1,13 @@
 const express = require('express')
 const shows = require('./shows')
 const app = express()
-const port = 3001
+const port = process.env.PORT || 3001
 
-app.get('/rest/shows', (req, res) => {
-    res.send(shows());
-})
+pp.use(express.static(path.join(__dirname, './backend/app.js')));
+
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, './backend/app.js', 'index.html'));
+});
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
